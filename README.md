@@ -23,7 +23,7 @@ The objective of this challenge is to recreate a simplified home page of our pla
 
 ### Design
 * Design is available on [Figma](https://www.figma.com/design/pTGAVBT2oka2f2IFIL8Nv3/Pigmo-Home-Page?node-id=0-1&t=mW85fPqtR6UshZfj-0).
-* Replicate the home page as per the given design. It is not necessary to implement all the components, just the main elements that make up the * basic structure of the page.
+* Replicate the home page as per the given design.
 * Feel free to add any features you feel are necessary to improve user experience or code quality.
 
 ### Delivery
