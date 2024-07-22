@@ -1,5 +1,13 @@
   @layer reset, base, tokens, recipes, utilities;
 
+  @font-face {
+    font-family: 'aglet-sans-bold';
+    src: url('/fonts/aglet-sans-bold.otf') format('woff2'),
+        url('/fonts/aglet-sans-bold.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
   body {
     background: #170D19;
+    font-family: 'aglet-sans-bold', sans-serif;
   }

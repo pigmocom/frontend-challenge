@@ -1,16 +1,12 @@
 import type { PropsWithCSS } from "@/types/utils";
 import type { PropsWithChildren } from "react";
 import { css } from "../../../styled-system/css";
-import { text } from "./styles";
+import { type TextVariants, textStyle } from "./styles";
 
-type TextPropsType = PropsWithCSS<{
-  size?: 'md' | 'xl',
-  color?: 'muted' | 'default',
-  weight?: 'medium' | 'semiBold'
-}>
+type TextPropsType = TextVariants & PropsWithCSS
 
-export function Text({ children, size = 'md', color = 'default', weight = 'medium', css: style }: PropsWithChildren<TextPropsType>) {
+export function Text({ children, size = 'textMedium', color = 'default', weight = 'medium', textTransform, css: style }: PropsWithChildren<TextPropsType>) {
   return (
-    <p className={css(text.raw({ size, color, weight }), style)}>{children}</p>
+    <p className={css(textStyle.raw({ size, color, weight, textTransform }), style)}>{children}</p>
   )
 }

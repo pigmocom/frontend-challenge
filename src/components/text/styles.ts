@@ -1,18 +1,20 @@
-import { cva } from "@styled-system/css";
+import { type RecipeVariantProps, cva } from "@styled-system/css";
 
-export const text = cva({
+export const textStyle = cva({
 	base: {
 		color: "white",
-		textTransform: "uppercase",
 	},
 	variants: {
 		size: {
-			md: {
-				fontSize: "20px",
-			},
-			xl: {
-				fontSize: "42px",
-			},
+			h1: { fontSize: 'h1' },
+			h2: { fontSize: 'h2' },
+			h3: { fontSize: 'h3' },
+			h4: { fontSize: 'h4' },
+			h5: { fontSize: 'h5' },
+			paragraph: { fontSize: 'paragraph' },
+			textSmall: { fontSize: 'textSmall' },
+			textMedium: { fontSize: 'textMedium' },
+			card: { fontSize: '18px' }
 		},
 		color: {
 			default: {
@@ -21,6 +23,9 @@ export const text = cva({
 			muted: {
 				color: "#826B8E",
 			},
+			green: {
+				color: 'green'
+			}
 		},
 		weight: {
 			medium: {
@@ -30,5 +35,12 @@ export const text = cva({
 				fontWeight: 700,
 			},
 		},
+		textTransform: {
+			uppercase: {
+				textTransform: "uppercase",
+			}
+		}
 	},
 });
+
+export type TextVariants = RecipeVariantProps<typeof textStyle>

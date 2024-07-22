@@ -1,7 +1,9 @@
 import { css } from "@styled-system/css";
 
 export const CarouselRootContainer = css.raw({
-
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '5'
 })
 
 export const CarouselHeaderContainer = css.raw({

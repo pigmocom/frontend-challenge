@@ -1,0 +1,64 @@
+import { type RecipeVariantProps, cva } from "@styled-system/css";
+
+export const cardRootStyle = cva({
+  base: {
+    borderRadius: 'md',
+    cursor: { base: 'pointer', _disabled: 'default' }
+  },
+  variants: {
+		radius: {
+			md: {
+				borderRadius: 'md',
+			}
+		},
+    border: {
+			outline: {
+				border: '1px solid #35243D'
+			},
+			"": {}
+		},
+    bg: {
+      grayGradient: {
+				background: {
+          base: "linear-gradient(129deg, rgba(0, 0, 0, 0) 63.84%, rgba(204, 149, 215, 0.15) 96.69%)",
+          _hover: "linear-gradient(129deg,#0000 63.84%,#ff00b833 96.69%)"
+        },
+      }
+    }
+  } 
+})
+
+export const cardIconStyle = cva({
+  base: {
+    borderRadius: 'md',
+  },
+  variants: {
+		radius: {
+			md: {
+				borderRadius: 'md',
+			}
+		},
+    test: {
+      test: {
+        paddingBlock: 2,
+        paddingInline: 4,
+        background: '#FF8500'
+      }
+    }
+  }
+})
+
+export const cardContentStyle = cva({
+  base: {},
+  variants: {
+		p: {
+      default: {
+        padding: 3
+      }
+    }
+  }
+})
+
+export type CardRootVariants = RecipeVariantProps<typeof cardRootStyle>
+export type CardContentVariants = RecipeVariantProps<typeof cardContentStyle>
+export type CardIconVariants = RecipeVariantProps<typeof cardIconStyle>

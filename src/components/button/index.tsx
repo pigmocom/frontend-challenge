@@ -5,12 +5,13 @@ import * as styles from './styles';
 type ButtonPropsType = {
   type?: "button" | "submit" | "reset";
 }
+  & styles.ButtonVariants
   & PropsWithCSS
   & Partial<ReactHTMLElement<HTMLButtonElement>>
 
-export function Button({ children, css: style, ...rest }: PropsWithChildren<ButtonPropsType>) {
+export function Button({ children, css: style, bg = 'primary', radius = 'md', border = 'primary', ...rest }: PropsWithChildren<ButtonPropsType>) {
   return (
-    <button className={styles.buttonContainer({ bg: "primary", radius: "md" })} {...rest}>
+    <button className={styles.buttonContainer({ bg, radius, border })} {...rest}>
       {children}
     </button>
   )
