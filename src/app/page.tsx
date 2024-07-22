@@ -54,12 +54,12 @@ export default function Home() {
                   <Icons.Google />
                 </Text>
               </Button>
-              <Button bg='outline' border="outline">
+              <Button bg='outline' border="outline" aspect="square">
                 <Text size="h4" weight="semiBold" textTransform="uppercase">
                   <Icons.MetaMask />
                 </Text>
               </Button>
-              <Button bg='outline' border="outline">
+              <Button bg='outline' border="outline" aspect="square">
                 <Text size="h4" weight="semiBold" textTransform="uppercase">
                   <Icons.Solana />
                 </Text>
