@@ -19,7 +19,7 @@ export const theme: Config['theme'] = {
         secondary: { value: '#FF6864' },
 
         muted: { value: '#826B8E' },
-        green: { value: '#24D861' },
+        green: { value: '#24d861' },
         success: { value: '{color.green}' },
         danger: { value: '#DE3449' },
   
@@ -36,7 +36,7 @@ export const theme: Config['theme'] = {
       },
       spacing: {
         0: { value: "0px" }, // 0px
-        px: { value: "1" }, // 1px (assumindo que "1" se refere a 1px)
+        px: { value: "1px" }, // 1px
         0.5: { value: "0.125rem" }, // 2px
         0.75: { value: "0.188rem" }, // 3px
         1: { value: "0.25rem" }, // 4px

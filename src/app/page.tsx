@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </Banner.Root>
 
-        <div className={css({ display: 'flex', justifyContent: 'center', paddingBlock: '8' })}>
+        <div className={css({ display: 'flex', flexDirection: 'column', gap: '14', alignItems: 'center', paddingBlock: '8' })}>
           <Carousel.Root>
             <Carousel.Header>
               <Flex gap={12}>
@@ -91,12 +91,65 @@ export default function Home() {
 
                   <Flex>
                     <Button bg="outline" border="">
-                      <Text>{'<'}</Text>
+                      <Icons.ChevronLeft />
                     </Button>
                     <Button bg="outline" border="">
-                      <Text>{'>'}</Text>
+                      <Icons.ChevronRight />
                     </Button>
                   </Flex>
+                </Flex>
+              </Flex>
+            </Carousel.Header>
+            <Carousel.Content gap={4}>
+              {cryptoMock.map((i) => (
+                <Card.Root key={i}>
+                  <Card.Content gap={4} direction="column">
+                    <Flex gap={10}>
+                      <Flex gap={3}>
+                        <Card.Icon>
+                          <Image src={`/assets/crypto/${i}.png`} fill alt="card-icon" />
+                        </Card.Icon>
+                        <Text size='h4' textTransform="uppercase">{i}</Text>
+                      </Flex>
+
+                      <Tag outline="green" bg="outline" gap={1}>
+                        <Icons.ArrowDiagonalUp />
+                        <Text color="green">2.13%</Text>
+                      </Tag>
+                    </Flex>
+                    <Flex gap={2} direction="column" width="full">
+                      <Divider />
+                      <Text size="card">$ 60,390.85</Text>
+                      <Divider />
+                    </Flex>
+                    <Flex justify="between" width="full">
+                      <Text color="muted" size="textMedium" textTransform="uppercase">24 VOL</Text>
+                      <Text size="textMedium" textTransform="uppercase">$757M</Text>
+                    </Flex>
+                    <Flex justify="between" width="full">
+                      <Text color="muted" size="textMedium" textTransform="uppercase">LEVERAGE</Text>
+                      <Text size="textMedium" textTransform="uppercase">1000x</Text>
+                    </Flex>
+                  </Card.Content>
+                </Card.Root>
+              ))}
+            </Carousel.Content>
+          </Carousel.Root>
+          <Carousel.Root>
+            <Carousel.Header>
+              <Flex gap={12}>
+                <Flex gap={1.5}>
+                  <Carousel.HeaderIcon as={Icons.Spades} />
+                  <Text size="h4">CRIPTMOEDAS</Text>
+                </Flex>
+
+                <Flex>
+                  <Button bg="outline" border="">
+                    <Icons.ChevronLeft />
+                  </Button>
+                  <Button bg="outline" border="">
+                    <Icons.ChevronRight />
+                  </Button>
                 </Flex>
               </Flex>
             </Carousel.Header>

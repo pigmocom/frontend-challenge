@@ -22,7 +22,8 @@ export const tagContainer = cva({
 		},
     outline: {
       green: {
-				border: '{spacing.0.75} solid green'
+				border: '{spacing.px} solid {colors.green}',
+        boxShadow: '0 0 4px {colors.green}'
       }
     },
     padding: {
