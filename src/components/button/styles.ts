@@ -14,7 +14,7 @@ export const buttonContainer = cva({
 	variants: {
 		bg: {
 			primary: {
-				background: "linear-gradient(145deg, #ff416c, #ff4b2b)",
+				background: "radial-gradient(50% 100% at 50% 0,#E90083 0,#FF6864 100%)",
 			},
 			outline: {}
 		},
@@ -31,6 +31,12 @@ export const buttonContainer = cva({
 				border: '1px solid #35243D'
 			},
 			"": {}
+		},
+		aspect: {
+			square: {
+				paddingBlock: "3",
+				paddingInline: "3",
+			}
 		}
 	}
 });

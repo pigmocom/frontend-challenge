@@ -48,14 +48,20 @@ export default function Home() {
               <Button>
                 <Text size="h4" weight="semiBold">QUERO ME CADASTRAR</Text>
               </Button>
-              <Button bg='outline' border="outline">
-                <Text size="h4" weight="semiBold" textTransform="uppercase">G</Text>
+              <Button bg='outline' border="outline" aspect="square">
+                <Text size="h4" weight="semiBold" textTransform="uppercase">
+                  <Icons.Google />
+                </Text>
               </Button>
               <Button bg='outline' border="outline">
-                <Text size="h4" weight="semiBold" textTransform="uppercase">M</Text>
+                <Text size="h4" weight="semiBold" textTransform="uppercase">
+                  <Icons.MetaMask />
+                </Text>
               </Button>
               <Button bg='outline' border="outline">
-                <Text size="h4" weight="semiBold" textTransform="uppercase">S</Text>
+                <Text size="h4" weight="semiBold" textTransform="uppercase">
+                  <Icons.Solana />
+                </Text>
               </Button>
             </Flex>
           </div>

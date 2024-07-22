@@ -9,9 +9,9 @@ type ButtonPropsType = {
   & PropsWithCSS
   & Partial<ReactHTMLElement<HTMLButtonElement>>
 
-export function Button({ children, css: style, bg = 'primary', radius = 'md', border = 'primary', ...rest }: PropsWithChildren<ButtonPropsType>) {
+export function Button({ children, css: style, bg = 'primary', radius = 'md', border = 'primary', aspect, ...rest }: PropsWithChildren<ButtonPropsType>) {
   return (
-    <button className={styles.buttonContainer({ bg, radius, border })} {...rest}>
+    <button className={styles.buttonContainer({ bg, radius, border, aspect })} {...rest}>
       {children}
     </button>
   )
