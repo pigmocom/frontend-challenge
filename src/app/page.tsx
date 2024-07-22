@@ -70,10 +70,10 @@ export default function Home() {
 
         <div className={css({ display: 'flex', justifyContent: 'center', paddingBlock: '8' })}>
           <Carousel.Root>
-            <Carousel.Title>
+            <Carousel.Header>
               <Flex gap={12}>
                 <Flex gap={1.5}>
-                  <Carousel.TitleIcon as={Icons.Spades} />
+                  <Carousel.HeaderIcon as={Icons.Spades} />
                   <Text size="h4">CRIPTMOEDAS</Text>
                 </Flex>
 
@@ -99,7 +99,7 @@ export default function Home() {
                   </Flex>
                 </Flex>
               </Flex>
-            </Carousel.Title>
+            </Carousel.Header>
             <Carousel.Content gap={4}>
               {cryptoMock.map((i) => (
                 <Card.Root key={i}>
@@ -107,7 +107,7 @@ export default function Home() {
                     <Flex gap={10}>
                       <Flex gap={3}>
                         <Card.Icon>
-                          <Image src={`/assets/crypto/${i}.png`} fill />
+                          <Image src={`/assets/crypto/${i}.png`} fill alt="card-icon" />
                         </Card.Icon>
                         <Text size='h4' textTransform="uppercase">{i}</Text>
                       </Flex>
