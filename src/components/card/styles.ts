@@ -30,7 +30,10 @@ export const cardRootStyle = cva({
 
 export const cardIconStyle = cva({
   base: {
+    position: 'relative',
     borderRadius: 'md',
+    width: '7',
+    height: '7'
   },
   variants: {
 		radius: {
@@ -38,13 +41,6 @@ export const cardIconStyle = cva({
 				borderRadius: 'md',
 			}
 		},
-    test: {
-      test: {
-        paddingBlock: 2,
-        paddingInline: 4,
-        background: '#FF8500'
-      }
-    }
   }
 })
 

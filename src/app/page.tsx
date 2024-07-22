@@ -7,6 +7,7 @@ import { Tag } from "@/components/tag";
 import { Text } from "@/components/text";
 import { Flex } from "@/components/utils/flex";
 
+import { cryptoMock } from "@/@shared/crypto.mock";
 import { Card } from "@/components/card";
 import { Divider } from "@/components/divider";
 import { css } from "@styled-system/css";
@@ -100,15 +101,15 @@ export default function Home() {
               </Flex>
             </Carousel.Title>
             <Carousel.Content gap={4}>
-              {Array(5).fill('').map((i) => (
+              {cryptoMock.map((i) => (
                 <Card.Root key={i}>
                   <Card.Content gap={4} direction="column">
                     <Flex gap={10}>
                       <Flex gap={3}>
-                        <Card.Icon test="test">
-                          <Text size="h3">B</Text>
+                        <Card.Icon>
+                          <Image src={`/assets/crypto/${i}.png`} fill />
                         </Card.Icon>
-                        <Text size='h4' textTransform="uppercase">btc</Text>
+                        <Text size='h4' textTransform="uppercase">{i}</Text>
                       </Flex>
 
                       <Tag outline="green" bg="outline" gap={1}>
