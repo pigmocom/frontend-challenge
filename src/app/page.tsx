@@ -8,6 +8,7 @@ import { Text } from "@/components/text";
 import { Flex } from "@/components/utils/flex";
 
 import { cryptoMock } from "@/@shared/crypto.mock";
+import { sportsMock } from "@/@shared/sports.mock";
 import { Card } from "@/components/card";
 import { Divider } from "@/components/divider";
 import { css } from "@styled-system/css";
@@ -117,7 +118,7 @@ export default function Home() {
                         <Text color="green">2.13%</Text>
                       </Tag>
                     </Flex>
-                    <Flex gap={2} direction="column" width="full">
+                    <Flex gap={2} direction="column" align="start" width="full">
                       <Divider />
                       <Text size="card">$ 60,390.85</Text>
                       <Divider />
@@ -135,58 +136,44 @@ export default function Home() {
               ))}
             </Carousel.Content>
           </Carousel.Root>
+
           <Carousel.Root>
             <Carousel.Header>
               <Flex gap={12}>
                 <Flex gap={1.5}>
-                  <Carousel.HeaderIcon as={Icons.Spades} />
+                  <Carousel.HeaderIcon as={Icons.CassinoSeven} />
                   <Text size="h4">CRIPTMOEDAS</Text>
-                </Flex>
-
-                <Flex>
-                  <Button bg="outline" border="">
-                    <Icons.ChevronLeft />
-                  </Button>
-                  <Button bg="outline" border="">
-                    <Icons.ChevronRight />
-                  </Button>
                 </Flex>
               </Flex>
             </Carousel.Header>
-            <Carousel.Content gap={4}>
-              {cryptoMock.map((i) => (
+            <Flex gap={4}>
+              {Array(7).fill('').map((i) => (
                 <Card.Root key={i}>
-                  <Card.Content gap={4} direction="column">
-                    <Flex gap={10}>
-                      <Flex gap={3}>
-                        <Card.Icon>
-                          <Image src={`/assets/crypto/${i}.png`} fill alt="card-icon" />
-                        </Card.Icon>
-                        <Text size='h4' textTransform="uppercase">{i}</Text>
-                      </Flex>
+                  <Card.Image src='/assets/cards/originals.png' alt='image' />
+                </Card.Root>
+              ))}
+            </Flex>
+          </Carousel.Root>
 
-                      <Tag outline="green" bg="outline" gap={1}>
-                        <Icons.ArrowDiagonalUp />
-                        <Text color="green">2.13%</Text>
-                      </Tag>
-                    </Flex>
-                    <Flex gap={2} direction="column" width="full">
-                      <Divider />
-                      <Text size="card">$ 60,390.85</Text>
-                      <Divider />
-                    </Flex>
-                    <Flex justify="between" width="full">
-                      <Text color="muted" size="textMedium" textTransform="uppercase">24 VOL</Text>
-                      <Text size="textMedium" textTransform="uppercase">$757M</Text>
-                    </Flex>
-                    <Flex justify="between" width="full">
-                      <Text color="muted" size="textMedium" textTransform="uppercase">LEVERAGE</Text>
-                      <Text size="textMedium" textTransform="uppercase">1000x</Text>
-                    </Flex>
+          <Carousel.Root>
+            <Carousel.Header>
+              <Flex gap={12}>
+                <Flex gap={1.5}>
+                  <Carousel.HeaderIcon as={Icons.Sport} />
+                  <Text size="h4">CRIPTMOEDAS</Text>
+                </Flex>
+              </Flex>
+            </Carousel.Header>
+            <Flex gap={4}>
+              {sportsMock.map((E) => (
+                <Card.Root key={E.title} bg="highlight">
+                  <Card.Content direction="column" gap={5}>
+                    <E.icon />
+                    <Text>{E.title}</Text>
                   </Card.Content>
                 </Card.Root>
               ))}
-            </Carousel.Content>
+            </Flex>
           </Carousel.Root>
         </div>
       </main>

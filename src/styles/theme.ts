@@ -22,7 +22,7 @@ export const theme: Config['theme'] = {
         green: { value: '#24d861' },
         success: { value: '{color.green}' },
         danger: { value: '#DE3449' },
-  
+
         white: { value: '#fff' },
   
         background: { value: '#170D19' },

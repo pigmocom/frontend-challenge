@@ -23,6 +23,12 @@ export const cardRootStyle = cva({
           base: "linear-gradient(129deg, rgba(0, 0, 0, 0) 63.84%, rgba(204, 149, 215, 0.15) 96.69%)",
           _hover: "linear-gradient(129deg,#0000 63.84%,#ff00b833 96.69%)"
         },
+      },
+      highlight: {
+        background: {
+          base: "linear-gradient(to bottom, #6c5ce7, #343a6f)",
+          _hover: "linear-gradient(145deg, #ff0080, #ff4d4d)"
+        }
       }
     }
   } 
