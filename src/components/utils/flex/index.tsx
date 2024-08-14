@@ -1,9 +1,23 @@
+import { css, Styles } from '@styled-system/css'
 import type { PropsWithChildren } from 'react'
-import * as style from './styles'
+import * as s from './styles'
 
-export function Flex({ children, align = 'center', direction = 'row', justify, gap, width }: PropsWithChildren<style.FlexVariants>) {
+type FlexProps = {
+  css?: Styles
+} & s.FlexVariants
+
+export function Flex({
+  children,
+  align = 'center',
+  direction = 'row',
+  justify,
+  gap,
+  width,
+  css: style
+}: PropsWithChildren<FlexProps>
+) {
   return (
-    <div className={style.flexContainer({ align, direction, justify, gap, width })}>
+    <div className={css(s.flexContainer.raw({ align, direction, justify, gap, width }), style)}>
       {children}
     </div>
   )
