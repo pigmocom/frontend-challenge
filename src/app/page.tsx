@@ -23,7 +23,7 @@ export default function Home() {
           <Image src='/assets/hamburger.svg' alt="hamburger" width={30} height={30} />
           <Image src='/assets/logo.svg' alt="logo" width={100} height={24} />
         </Flex>
-        <Flex gap={1}>
+        <Flex gap={1} width="auto">
           <Button bg='outline' border="">
             <Text size="h4" weight="semiBold" textTransform="uppercase">login</Text>
           </Button>
