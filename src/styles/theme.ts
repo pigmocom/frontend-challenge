@@ -35,7 +35,7 @@ export const theme: Config['theme'] = {
         body: { value: 'aglet-sans-bold, sans-serif' }
       },
       spacing: {
-        0: { value: "0px" }, // 0px
+        0: { value: "0px" } , // 0px
         px: { value: "1px" }, // 1px
         0.5: { value: "0.125rem" }, // 2px
         0.75: { value: "0.188rem" }, // 3px

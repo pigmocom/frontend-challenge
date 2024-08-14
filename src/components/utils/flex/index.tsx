@@ -8,12 +8,12 @@ export type FlexProps = {
 
 export function Flex({
   children,
+  css: style,
   align = 'center',
   direction = 'row',
   justify,
   gap,
   width = 'full',
-  css: style
 }: PropsWithChildren<FlexProps>
 ) {
   return (

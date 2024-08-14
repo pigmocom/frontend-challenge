@@ -26,9 +26,10 @@ export const cardRootStyle = cva({
       },
       highlight: {
         background: {
-          base: "linear-gradient(to bottom, #6c5ce7, #343a6f)",
-          _hover: "linear-gradient(145deg, #ff0080, #ff4d4d)"
-        }
+            base: 'linear-gradient(145deg, #170D19 0%, #35243D 100%)',
+
+        },
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
       }
     }
   } 
@@ -58,6 +59,16 @@ export const cardContentStyle = cva({
 		p: {
       default: {
         padding: 3
+      },
+    },
+    pl: {
+      10: {
+        padding: 10
+      }
+    },
+    pb: {
+      7: {
+        paddingBlock: 7
       }
     }
   }

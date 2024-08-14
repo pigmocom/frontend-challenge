@@ -11,6 +11,7 @@ import { cryptoMock } from "@/@shared/crypto.mock";
 import { sportsMock } from "@/@shared/sports.mock";
 import { Card } from "@/components/card";
 import { Divider } from "@/components/divider";
+import { css } from "@styled-system/css";
 import Image from "next/image";
 import { stack } from "../../styled-system/patterns";
 
@@ -68,7 +69,7 @@ export default function Home() {
           </div>
         </Banner.Root>
 
-        <Flex direction='column' gap={14} align='center' css={{ paddingBlock: '8' }}>
+        <Flex direction='column' gap={14} align='center' css={css.raw({ paddingBlock: '3rem', paddingInline: '16%' })}>
           <Carousel.Root>
             <Carousel.Header>
               <Flex gap={12} width="auto">
@@ -166,7 +167,7 @@ export default function Home() {
             <Flex gap={4}>
               {sportsMock.map((E) => (
                 <Card.Root key={E.title} bg="highlight" align="center" justify="center">
-                  <Card.Content direction="column" gap={5}>
+                  <Card.Content direction="column" gap={5} pl={10} pb={7}>
                     <E.icon />
                     <Text>{E.title}</Text>
                   </Card.Content>
