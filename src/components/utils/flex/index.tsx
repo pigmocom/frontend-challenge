@@ -12,7 +12,7 @@ export function Flex({
   direction = 'row',
   justify,
   gap,
-  width,
+  width = 'full',
   css: style
 }: PropsWithChildren<FlexProps>
 ) {

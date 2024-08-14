@@ -7,7 +7,7 @@ import { CarouselRootContainer } from './styles';
 export function CarouselRoot({
   children,
   css: style,
-  align,
+  align = 'start',
   direction,
   gap,
   justify,

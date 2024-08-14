@@ -68,18 +68,18 @@ export default function Home() {
           </div>
         </Banner.Root>
 
-        <Flex direction={'column'} gap={14} align={'center'} css={{ paddingBlock: '8' }}>
+        <Flex direction='column' gap={14} align='center' css={{ paddingBlock: '8' }}>
           <Carousel.Root>
             <Carousel.Header>
-              <Flex gap={12}>
-                <Flex gap={1.5}>
+              <Flex gap={12} width="auto">
+                <Flex gap={1.5} width="auto">
                   <Carousel.HeaderIcon as={Icons.Spades} />
                   <Text size="h4">CRIPTMOEDAS</Text>
                 </Flex>
 
-                <Flex>
-                  <Flex gap={4}>
-                    <Flex gap={1.5}>
+                <Flex width="auto">
+                  <Flex gap={4} width="auto">
+                    <Flex gap={1.5} width="auto">
                       <Text color="muted" size="textMedium" textTransform="uppercase">Total 24h volume:</Text>
                       <Text size="textMedium" color="green">$2.27B</Text>
                     </Flex>
@@ -89,7 +89,7 @@ export default function Home() {
                     </Tag>
                   </Flex>
 
-                  <Flex>
+                  <Flex width="auto">
                     <Button bg="outline" border="">
                       <Icons.ChevronLeft />
                     </Button>
@@ -117,16 +117,16 @@ export default function Home() {
                         <Text color="green">2.13%</Text>
                       </Tag>
                     </Flex>
-                    <Flex gap={2} direction="column" align="start" width="full">
+                    <Flex gap={2} direction="column" align="start">
                       <Divider />
                       <Text size="card">$ 60,390.85</Text>
                       <Divider />
                     </Flex>
-                    <Flex justify="between" width="full">
+                    <Flex justify="between">
                       <Text color="muted" size="textMedium" textTransform="uppercase">24 VOL</Text>
                       <Text size="textMedium" textTransform="uppercase">$757M</Text>
                     </Flex>
-                    <Flex justify="between" width="full">
+                    <Flex justify="between">
                       <Text color="muted" size="textMedium" textTransform="uppercase">LEVERAGE</Text>
                       <Text size="textMedium" textTransform="uppercase">1000x</Text>
                     </Flex>
@@ -163,9 +163,9 @@ export default function Home() {
                 </Flex>
               </Flex>
             </Carousel.Header>
-            <Flex gap={4} width="full">
+            <Flex gap={4}>
               {sportsMock.map((E) => (
-                <Card.Root key={E.title} bg="highlight"  >
+                <Card.Root key={E.title} bg="highlight" align="center" justify="center">
                   <Card.Content direction="column" gap={5}>
                     <E.icon />
                     <Text>{E.title}</Text>

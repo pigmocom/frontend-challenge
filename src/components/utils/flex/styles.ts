@@ -82,6 +82,9 @@ export const flexContainer = cva({
       96: { gap: "24rem" },
     },
     width: {
+      auto: {
+        width: 'auto',
+      },
       full: {
         width: '100%',
       }
