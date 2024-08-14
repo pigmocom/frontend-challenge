@@ -1,6 +1,11 @@
+import { css, Styles } from "@styled-system/css";
 import type { PropsWithChildren } from "react";
 import { Flex, FlexProps } from "../utils/flex";
 import { type CardRootVariants, cardRootStyle } from "./styles";
+
+type CardRootProps = {
+  css?: Styles
+} & CardRootVariants & Omit<FlexProps, 'css'>
 
 export function CardRoot({
   children,
@@ -12,11 +17,13 @@ export function CardRoot({
   direction,
   gap,
   justify,
-  width
-}: PropsWithChildren<CardRootVariants & Omit<FlexProps, 'css'>>) {
+  width,
+
+  css: style
+}: PropsWithChildren<CardRootProps>) {
   return (
     <Flex
-      css={cardRootStyle.raw({ border, bg, radius })}
+      css={css.raw(cardRootStyle.raw({ border, bg, radius }), style)}
       align={align}
       direction={direction}
       gap={gap}
