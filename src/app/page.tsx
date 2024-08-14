@@ -164,9 +164,9 @@ export default function Home() {
                 </Flex>
               </Flex>
             </Carousel.Header>
-            <Flex gap={4}>
+            <Flex gap={4} width="full">
               {sportsMock.map((E) => (
-                <Card.Root key={E.title} bg="highlight">
+                <Card.Root key={E.title} bg="highlight" width="full">
                   <Card.Content direction="column" gap={5}>
                     <E.icon />
                     <Text>{E.title}</Text>

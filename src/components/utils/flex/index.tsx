@@ -2,7 +2,7 @@ import { css, Styles } from '@styled-system/css'
 import type { PropsWithChildren } from 'react'
 import * as s from './styles'
 
-type FlexProps = {
+export type FlexProps = {
   css?: Styles
 } & s.FlexVariants
 
