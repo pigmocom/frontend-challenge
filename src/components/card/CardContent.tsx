@@ -6,7 +6,7 @@ import { type CardContentVariants, cardContentStyle } from "./styles";
 export function CardContent({ children, p = 'default', ...rest }: PropsWithChildren<CardContentVariants & FlexVariants>) {
   return (
     <div className={cardContentStyle({ p })}>
-      <Flex {...rest}>
+      <Flex {...rest} width="full">
         {children}
       </Flex>
     </div>

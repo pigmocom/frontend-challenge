@@ -51,7 +51,9 @@ export const cardIconStyle = cva({
 })
 
 export const cardContentStyle = cva({
-  base: {},
+  base: {
+    width: '100%'
+  },
   variants: {
 		p: {
       default: {

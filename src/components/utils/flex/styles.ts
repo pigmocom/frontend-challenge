@@ -88,7 +88,7 @@ export const flexContainer = cva({
       full: {
         width: '100%',
       }
-    }
+    },
   }
 })
 
