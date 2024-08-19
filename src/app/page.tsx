@@ -11,6 +11,7 @@ import { cryptoMock } from "@/@shared/crypto.mock";
 import { sportsMock } from "@/@shared/sports.mock";
 import { Card } from "@/components/card";
 import { Divider } from "@/components/divider";
+import { Footer } from "@/components/footer";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { stack } from "../../styled-system/patterns";
@@ -177,6 +178,73 @@ export default function Home() {
           </Carousel.Root>
         </Flex>
       </main>
+      <Footer.Root align="center">
+        <Flex justify="center" align="center">
+          <Icons.WhiteLogo />
+          <Flex gap={8} align="center">
+            <Icons.Android />
+            <Text color="muted" letterSpace="logo">BEYOND</Text>
+            <Text letterSpace="logo">LUCK</Text>
+            <Icons.Android />
+          </Flex>
+        </Flex>
+        <Flex align="start" justify="around">
+          <ul>
+            <Flex gap={6} direction="column">
+              <li>
+                <Text textTransform="uppercase" size="h4">Plataform</Text>
+              </li>
+              <Flex gap={4} align="start" direction="column">
+                <li>
+                  <Text color="muted">About</Text>
+                </li>
+                <li>
+                  <Text color="muted">Support</Text>
+                </li>
+                <li>
+                  <Text color="muted">Provably Fair</Text>
+                </li>
+              </Flex>
+            </Flex>
+          </ul>
+          <ul>
+            <Flex gap={6} direction="column">
+              <li>
+                <Text textTransform="uppercase" size="h4">Plataform</Text>
+              </li>
+              <Flex gap={4} align="start" direction="column">
+                <li>
+                  <Text color="muted">Terms of Service</Text>
+                </li>
+                <li>
+                  <Text color="muted">Privacy Policy</Text>
+                </li>
+                <li>
+                  <Text color="muted">License</Text>
+                </li>
+              </Flex>
+            </Flex>
+          </ul>
+          <ul>
+            <Flex gap={6} direction="column">
+              <li>
+                <Text textTransform="uppercase" size="h4">Plataform</Text>
+              </li>
+              <Flex gap={4} align="start" direction="column">
+                <li>
+                  <Text color="muted">About</Text>
+                </li>
+                <li>
+                  <Text color="muted">Support</Text>
+                </li>
+                <li>
+                  <Text color="muted">Provably Fair</Text>
+                </li>
+              </Flex>
+            </Flex>
+          </ul>
+        </Flex>
+      </Footer.Root>
     </div>
   );
 }

@@ -3,7 +3,8 @@ import { type RecipeVariantProps, cva } from "@styled-system/css";
 export const cardRootStyle = cva({
   base: {
     borderRadius: 'md',
-    cursor: { base: 'pointer', _disabled: 'default' }
+    cursor: { base: 'pointer', _disabled: 'default' },
+    overflow: 'hidden'
   },
   variants: {
 		radius: {

@@ -39,6 +39,11 @@ export const textStyle = cva({
 			uppercase: {
 				textTransform: "uppercase",
 			}
+		},
+		letterSpace: {
+			logo: {
+				letterSpacing: "{spacing.7}"
+			}
 		}
 	},
 });
