@@ -12,6 +12,7 @@ import { sportsMock } from "@/@shared/sports.mock";
 import { Card } from "@/components/card";
 import { Divider } from "@/components/divider";
 import { Footer } from "@/components/footer";
+import { SolidCard } from "@/components/solid-card";
 import { css } from "@styled-system/css";
 import Image from "next/image";
 import { stack } from "../../styled-system/patterns";
@@ -178,71 +179,103 @@ export default function Home() {
           </Carousel.Root>
         </Flex>
       </main>
-      <Footer.Root align="center">
-        <Flex justify="center" align="center">
-          <Icons.WhiteLogo />
-          <Flex gap={8} align="center">
-            <Icons.Android />
-            <Text color="muted" letterSpace="logo">BEYOND</Text>
-            <Text letterSpace="logo">LUCK</Text>
-            <Icons.Android />
+      <Footer.Root align="center" direction="column" gap={8}>
+        <Flex gap={11} direction="column">
+          <Flex direction="row">
+            <Flex justify="center" align="center">
+              <Icons.WhiteLogo />
+              <Flex gap={8} align="center">
+                <Icons.Android />
+                <Text color="muted" letterSpace="logo">BEYOND</Text>
+                <Text letterSpace="logo">LUCK</Text>
+                <Icons.Android />
+              </Flex>
+            </Flex>
+            <Flex align="start" justify="around">
+              <ul>
+                <Flex gap={6} direction="column">
+                  <li>
+                    <Text textTransform="uppercase" size="h4">Plataform</Text>
+                  </li>
+                  <Flex gap={4} align="start" direction="column">
+                    <li>
+                      <Text color="muted">About</Text>
+                    </li>
+                    <li>
+                      <Text color="muted">Support</Text>
+                    </li>
+                    <li>
+                      <Text color="muted">Provably Fair</Text>
+                    </li>
+                  </Flex>
+                </Flex>
+              </ul>
+              <ul>
+                <Flex gap={6} direction="column">
+                  <li>
+                    <Text textTransform="uppercase" size="h4">Plataform</Text>
+                  </li>
+                  <Flex gap={4} align="start" direction="column">
+                    <li>
+                      <Text color="muted">Terms of Service</Text>
+                    </li>
+                    <li>
+                      <Text color="muted">Privacy Policy</Text>
+                    </li>
+                    <li>
+                      <Text color="muted">License</Text>
+                    </li>
+                  </Flex>
+                </Flex>
+              </ul>
+              <ul>
+                <Flex gap={6} direction="column">
+                  <li>
+                    <Text textTransform="uppercase" size="h4">Plataform</Text>
+                  </li>
+                  <Flex gap={4} align="start" direction="column">
+                    <li>
+                      <Text color="muted">About</Text>
+                    </li>
+                    <li>
+                      <Text color="muted">Support</Text>
+                    </li>
+                    <li>
+                      <Text color="muted">Provably Fair</Text>
+                    </li>
+                  </Flex>
+                </Flex>
+              </ul>
+            </Flex>
+          </Flex>
+          <Flex gap={4}>
+            <SolidCard.Root gap={5} direction="row" background="pink">
+              <Icons.DiscordLogo />
+              <Text>Join Discord's largest community of players now!</Text>
+            </SolidCard.Root>
+            <SolidCard.Root gap={5} direction="row">
+              <Icons.Telegram />
+              <Text>Pigmo is also on Telegram. Discover more now</Text>
+            </SolidCard.Root>
+            <SolidCard.Root gap={5} direction="row" background="dark">
+              <Icons.X />
+              <Text>Follow us on X and keep up everything about us</Text>
+            </SolidCard.Root>
           </Flex>
         </Flex>
-        <Flex align="start" justify="around">
-          <ul>
-            <Flex gap={6} direction="column">
-              <li>
-                <Text textTransform="uppercase" size="h4">Plataform</Text>
-              </li>
-              <Flex gap={4} align="start" direction="column">
-                <li>
-                  <Text color="muted">About</Text>
-                </li>
-                <li>
-                  <Text color="muted">Support</Text>
-                </li>
-                <li>
-                  <Text color="muted">Provably Fair</Text>
-                </li>
-              </Flex>
-            </Flex>
-          </ul>
-          <ul>
-            <Flex gap={6} direction="column">
-              <li>
-                <Text textTransform="uppercase" size="h4">Plataform</Text>
-              </li>
-              <Flex gap={4} align="start" direction="column">
-                <li>
-                  <Text color="muted">Terms of Service</Text>
-                </li>
-                <li>
-                  <Text color="muted">Privacy Policy</Text>
-                </li>
-                <li>
-                  <Text color="muted">License</Text>
-                </li>
-              </Flex>
-            </Flex>
-          </ul>
-          <ul>
-            <Flex gap={6} direction="column">
-              <li>
-                <Text textTransform="uppercase" size="h4">Plataform</Text>
-              </li>
-              <Flex gap={4} align="start" direction="column">
-                <li>
-                  <Text color="muted">About</Text>
-                </li>
-                <li>
-                  <Text color="muted">Support</Text>
-                </li>
-                <li>
-                  <Text color="muted">Provably Fair</Text>
-                </li>
-              </Flex>
-            </Flex>
-          </ul>
+        <Flex
+          justify="between"
+          css={css.raw({
+            paddingLeft: '10', paddingBlock: "5", borderTop: '1px solid', borderColor: "linear-gradient(180deg, hsla(287, 29%, 6%, 1) hsla(287, 28%, 10%, 1))"
+          })}
+        >
+          <Text>@2024 Pigmo - All rights reserved. Pigmo is licensed and authorized, operating under the Game Service Provider Master License. </Text>
+          <Flex gap={4} width="auto">
+            <Icons.Mail />
+            <Text textTransform="uppercase">
+              Contact Us
+            </Text>
+          </Flex>
         </Flex>
       </Footer.Root>
     </div>

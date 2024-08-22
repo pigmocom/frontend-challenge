@@ -2,9 +2,9 @@ import { css, Styles } from '@styled-system/css'
 import type { PropsWithChildren } from 'react'
 import * as s from './styles'
 
-export type FlexProps = {
+export type FlexProps<T = unknown> = {
   css?: Styles
-} & s.FlexVariants
+} & s.FlexVariants & T
 
 export function Flex({
   children,
