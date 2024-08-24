@@ -1,9 +1,9 @@
 import { PropsWithChildren } from "react";
-import { Flex, FlexProps } from "../utils/flex";
+import { Flex, FlexProps } from "../ui/flex";
 
 type FooterRootProps = {
 
-} & Omit<FlexProps, 'css'>
+} & FlexProps
 
 export function FooterRoot({ children, ...rest }: PropsWithChildren<FooterRootProps>) {
   return (

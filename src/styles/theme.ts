@@ -15,7 +15,7 @@ export const theme: Config['theme'] = {
         card: { value: '18px' }
       },
       colors: {
-        primary: { value: '#E90083' },
+        primary: { value: 'hsla(326, 100%, 46%, 1)' },
         secondary: { value: '#FF6864' },
 
         muted: { value: '#826B8E' },
@@ -73,11 +73,13 @@ export const theme: Config['theme'] = {
         96: { value: "24rem" }, // 384px
       },
       radii: {
-        20: { value: '0.65rem' }
+        20: { value: '0.65rem' },
+        8: { value: '0.5rem' }
       }
     },
     semanticTokens: {
       radii: {
+        sm: { value: '{radii.8}' },
         md: { value: '{radii.20}' }
       }
     }

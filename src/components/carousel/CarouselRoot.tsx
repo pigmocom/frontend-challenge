@@ -1,7 +1,7 @@
 import type { PropsWithCSS } from "@/types/utils";
 import { css } from "@styled-system/css";
 import type { PropsWithChildren } from "react";
-import { Flex, FlexProps } from "../utils/flex";
+import { Flex, FlexProps } from "../ui/flex";
 import { CarouselRootContainer } from './styles';
 
 export function CarouselRoot({

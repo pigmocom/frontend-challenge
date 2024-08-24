@@ -20,6 +20,9 @@ export const textStyle = cva({
 			default: {
 				color: "white",
 			},
+			primary: {
+				color: "primary",
+			},
 			muted: {
 				color: "#826B8E",
 			},

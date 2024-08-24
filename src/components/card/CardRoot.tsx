@@ -1,6 +1,6 @@
 import { css, Styles } from "@styled-system/css";
 import type { PropsWithChildren } from "react";
-import { Flex, FlexProps } from "../utils/flex";
+import { Flex, FlexProps } from "../ui/flex";
 import { type CardRootVariants, cardRootStyle } from "./styles";
 
 type CardRootProps = {

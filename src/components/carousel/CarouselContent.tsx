@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
-import { Flex } from "../utils/flex";
-import type { FlexVariants } from "../utils/flex/styles";
+import { Flex } from "../ui/flex";
+import type { FlexVariants } from "../ui/flex/styles";
 
 export function CarouselContent({ children, ...rest }: PropsWithChildren<FlexVariants>) {
   return (

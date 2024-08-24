@@ -1,7 +1,7 @@
 import type { PropsWithCSS } from '@/types/utils'
 import type { PropsWithChildren } from 'react'
-import { Flex } from '../utils/flex'
-import type { FlexVariants } from '../utils/flex/styles'
+import { Flex } from '../ui/flex'
+import type { FlexVariants } from '../ui/flex/styles'
 import * as style from './styles'
 
 type TagPropsType = style.TagVariants & PropsWithCSS

@@ -2,7 +2,7 @@ import { PropsWithCSS } from "@/types/utils";
 import { PropsWithChildren } from "react";
 
 import { css } from "@styled-system/css";
-import { Flex, FlexProps } from "../utils/flex";
+import { Flex, FlexProps } from "../ui/flex";
 
 import * as s from "./styles";
 
