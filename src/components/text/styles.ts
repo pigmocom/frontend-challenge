@@ -3,7 +3,12 @@ import { type RecipeVariantProps, cva } from "@styled-system/css";
 export const textStyle = cva({
 	base: {
 		color: "white",
-		fontFamily: 'Aglet Sans',
+		fontFamily: "body",
+	},
+	defaultVariants: {
+		size: 'textMedium',
+		color: 'default',
+		weight: 600,
 	},
 	variants: {
 		size: {
@@ -45,6 +50,11 @@ export const textStyle = cva({
 		letterSpace: {
 			logo: {
 				letterSpacing: "{spacing.7}"
+			}
+		},
+		lineHeight: {
+			paragraph: {
+				lineHeight: '22.94px'
 			}
 		}
 	},

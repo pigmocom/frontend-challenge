@@ -40,30 +40,24 @@ export default function Home() {
             <Banner.Image src='/assets/banner.png' alt='banner' />
             <div className={stack({ gap: 8 })}>
               <div>
-                <Text size="h1">Boas vindas  ao Pigmo!</Text>
-                <Text size="h3" color="muted">
-                  Jogue inteligente conosco. Crie sua conta
+                <Text size="h1" weight={700}>Boas vindas  ao Pigmo!</Text>
+                <Text size="h3" lineHeight="paragraph" color="muted">
+                  Jogue inteligente conosco. Crie sua conta <br />
                   ou entre agora para ganhar recompensas.
                 </Text>
               </div>
               <Flex gap={2}>
                 <Button>
-                  <Text size="h4" weight="semiBold">QUERO ME CADASTRAR</Text>
+                  <Text size="h5" weight={700}>QUERO ME CADASTRAR</Text>
                 </Button>
                 <Button bg='outline' border="outline" aspect="square">
-                  <Text size="h4" weight="semiBold" textTransform="uppercase">
-                    <Icons.Google />
-                  </Text>
+                  <Icons.Google />
                 </Button>
                 <Button bg='outline' border="outline" aspect="square">
-                  <Text size="h4" weight="semiBold" textTransform="uppercase">
-                    <Icons.MetaMask />
-                  </Text>
+                  <Icons.MetaMask />
                 </Button>
                 <Button bg='outline' border="outline" aspect="square">
-                  <Text size="h4" weight="semiBold" textTransform="uppercase">
-                    <Icons.Solana />
-                  </Text>
+                  <Icons.Solana />
                 </Button>
               </Flex>
             </div>
@@ -75,7 +69,7 @@ export default function Home() {
                 <Flex gap={12} width="auto">
                   <Flex gap={1.5} width="auto">
                     <Carousel.HeaderIcon as={Icons.Spades} />
-                    <Text size="h4">CRIPTMOEDAS</Text>
+                    <Text weight={700} size="h4">CRIPTMOEDAS</Text>
                   </Flex>
 
                   <Flex width="auto">
@@ -86,7 +80,7 @@ export default function Home() {
                       </Flex>
 
                       <Tag padding="pill" radius="md">
-                        <Text size="h5">TRADE</Text>
+                        <Text size="h5" weight={700}>TRADE</Text>
                       </Tag>
                     </Flex>
 
@@ -144,7 +138,7 @@ export default function Home() {
                 <Flex gap={12}>
                   <Flex gap={1.5}>
                     <Carousel.HeaderIcon as={Icons.CassinoSeven} />
-                    <Text size="h4">CRIPTMOEDAS</Text>
+                    <Text size="h4" weight={700}>CASSINO</Text>
                   </Flex>
                 </Flex>
               </Carousel.Header>
@@ -162,7 +156,7 @@ export default function Home() {
                 <Flex gap={12}>
                   <Flex gap={1.5}>
                     <Carousel.HeaderIcon as={Icons.Sport} />
-                    <Text size="h4">CRIPTMOEDAS</Text>
+                    <Text size="h4" weight={700}>ESPORTES</Text>
                   </Flex>
                 </Flex>
               </Carousel.Header>

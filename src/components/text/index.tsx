@@ -7,14 +7,10 @@ type TextPropsType = TextVariants & PropsWithCSS
 
 export function Text({
   children,
-  size = 'textMedium',
-  color = 'default',
-  weight,
-  textTransform,
-  letterSpace,
   css: style,
+  ...rest
 }: PropsWithChildren<TextPropsType>) {
   return (
-    <p className={css(textStyle.raw({ size, color, weight, textTransform, letterSpace }), style)}>{children}</p>
+    <p className={css(textStyle.raw({ ...rest }), style)}>{children}</p>
   )
 }
