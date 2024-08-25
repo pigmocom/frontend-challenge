@@ -30,11 +30,13 @@ export const theme: Config['theme'] = {
         background: { value: '#170D19' },
       },
       fontWeights: {
-        medium: { value: 700 },
-        regular: { value: 600 },
+        normal: { value: 400 },
+        medium: { value: 600 },
+        bold: { value: 700 },
+        black: { value: 900 }
       },
       fonts: {
-        body: { value: 'aglet-sans-bold, sans-serif' }
+        body: { value: 'Aglet Sans' }
       },
       spacing: {
         0: { value: "0px" } , // 0px

@@ -3,6 +3,7 @@ import { type RecipeVariantProps, cva } from "@styled-system/css";
 export const textStyle = cva({
 	base: {
 		color: "white",
+		fontFamily: 'Aglet Sans',
 	},
 	variants: {
 		size: {
@@ -31,12 +32,10 @@ export const textStyle = cva({
 			}
 		},
 		weight: {
-			medium: {
-				fontWeight: 600,
-			},
-			semiBold: {
-				fontWeight: 700,
-			},
+			400: { fontWeight: 400 },
+			600: { fontWeight: 600 },
+			700: { fontWeight: 700 },
+			900: { fontWeight: 900 }
 		},
 		textTransform: {
 			uppercase: {

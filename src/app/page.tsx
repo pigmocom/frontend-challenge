@@ -27,10 +27,10 @@ export default function Home() {
           </Flex>
           <Flex gap={1} width="auto">
             <Button bg='outline' border="">
-              <Text size="h4" weight="semiBold" textTransform="uppercase">login</Text>
+              <Text size="h5" weight={700} textTransform="uppercase">login</Text>
             </Button>
             <Button>
-              <Text size="h4" weight="semiBold">REGISTER</Text>
+              <Text size="h5" weight={700} >REGISTER</Text>
             </Button>
           </Flex>
         </Header.Root>
@@ -43,8 +43,6 @@ export default function Home() {
                 <Text size="h1">Boas vindas  ao Pigmo!</Text>
                 <Text size="h3" color="muted">
                   Jogue inteligente conosco. Crie sua conta
-                </Text>
-                <Text size="h3" color="muted">
                   ou entre agora para ganhar recompensas.
                 </Text>
               </div>

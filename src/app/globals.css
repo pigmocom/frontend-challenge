@@ -1,13 +1,56 @@
   @layer reset, base, tokens, recipes, utilities;
 
+    /* {
+      path: '../../public/fonts/aglet-sans-bold.otf',
+      weight: '700',
+      style: 'bold'
+    },
+    {
+      path: '../../public/fonts/aglet-sans-semibold.otf',
+      weight: '600',
+      style: 'semibold'
+    },
+    {
+      path: '../../public/fonts/aglet-sans-normal.woff2',
+      weight: '500',
+      style: 'normal'
+    },
+    {
+      path: '../../public/fonts/aglet-sans-regular.otf',
+      weight: '400',
+      style: 'regular'
+    }, */
   @font-face {
-    font-family: 'aglet-sans-bold';
-    src: url('/fonts/aglet-sans-bold.otf') format('woff2'),
-        url('/fonts/aglet-sans-bold.otf') format('woff');
-    font-weight: normal;
+    font-family: 'Aglet Sans';
+    src: url('../../public/fonts/aglet-sans-bold.otf') format('otf');
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Aglet Sans';
+    src: url('../../public/fonts/aglet-sans-semibold.otf') format('otf');
+    font-weight: 600;
+    font-style: semibold;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Aglet Sans';
+    src: url('../../public/fonts/aglet-sans-normal.woff2') format('woff2');
+    font-weight: 500;
     font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Aglet Sans';
+    src: url('../../public/fonts/aglet-sans-regular.otf') format('otf');
+    font-weight: 400;
+    font-style: regular;
+    font-display: swap;
+  }
+  :root {
+    --font-mona-sans: 'Aglet Sans', sans-serif;
   }
   body {
     background: #170D19;
-    font-family: 'aglet-sans-bold', sans-serif;
   }

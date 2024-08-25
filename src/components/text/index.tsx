@@ -9,7 +9,7 @@ export function Text({
   children,
   size = 'textMedium',
   color = 'default',
-  weight = 'medium',
+  weight,
   textTransform,
   letterSpace,
   css: style,

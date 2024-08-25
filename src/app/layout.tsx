@@ -3,7 +3,31 @@ import localFont from 'next/font/local';
 import '../styles/theme';
 import "./globals.css";
 
-const myFont = localFont({ src: '../../public/fonts/aglet-sans-bold.otf' })
+const myFont = localFont({
+  src: [
+    {
+      path: '../../public/fonts/aglet-sans-bold.otf',
+      weight: '700',
+      style: 'bold'
+    },
+    {
+      path: '../../public/fonts/aglet-sans-semibold.otf',
+      weight: '600',
+      style: 'semibold'
+    },
+    {
+      path: '../../public/fonts/aglet-sans-normal.woff2',
+      weight: '500',
+      style: 'normal'
+    },
+    {
+      path: '../../public/fonts/aglet-sans-regular.otf',
+      weight: '400',
+      style: 'regular'
+    },
+  ],
+  variable: '--font-aglet-sans',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={myFont.className}>{children}</body>
+      <body className={`${myFont.variable}`}>{children}</body>
     </html>
   );
 }
