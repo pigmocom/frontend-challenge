@@ -18,6 +18,8 @@ export const theme: Config['theme'] = {
         primary: { value: 'hsla(326, 100%, 46%, 1)' },
         secondary: { value: '#FF6864' },
 
+        border: { value: 'hsla(281, 26%, 19%, 1)' },
+
         muted: { value: '#826B8E' },
         green: { value: '#24d861' },
         success: { value: '{color.green}' },

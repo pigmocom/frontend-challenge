@@ -16,6 +16,8 @@ export const toggleMenuItemStyle = css({
   justifyItems: 'center',
   justifyContent: 'center',
 
+  gap: 1,
+
   paddingBlock: 2.5,
 
   width: '100%',

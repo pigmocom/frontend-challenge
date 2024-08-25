@@ -16,7 +16,7 @@ export const tagContainer = cva({
 				border: '1px solid #FF6864'
 			},
 			outline: {
-				border: '1px solid #35243D'
+				border: '1px solid {colors.border}'
 			},
 			"": {}
 		},

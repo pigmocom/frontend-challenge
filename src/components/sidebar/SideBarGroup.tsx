@@ -1,7 +1,8 @@
 import { PropsWithChildren } from "react";
-import { SideBar } from ".";
+import { Icons } from "../@shared/icons";
 import { Text } from "../text";
-import { sideBarGroupStyle, SidebarGroupVariants } from "./styles";
+import { Flex } from "../ui/flex";
+import { sideBarGroupHeaderStyle, sideBarGroupStyle, SidebarGroupVariants } from "./styles";
 
 type SidebarGroupProps = {
   title: string
@@ -10,9 +11,21 @@ type SidebarGroupProps = {
 export function SideBarGroup({ children, title, selected }: PropsWithChildren<SidebarGroupProps>) {
   return (
     <div className={sideBarGroupStyle({ selected })}>
-      <SideBar.Item border="block" icon="ChevronTop" iconPosition="right">
-        <Text size="h5" textTransform="uppercase" color={!(selected === "active") ? "muted" : "primary"}>{title}</Text>
-      </SideBar.Item>
+      <Flex
+        justify="between"
+        gap={3}
+        css={sideBarGroupHeaderStyle.raw({ selected })}
+      >
+        <Text
+          size="h5"
+          textTransform="uppercase"
+          weight="semiBold"
+          color={selected === 'active' ? "primary" : "muted"}
+        >
+          {title}
+        </Text>
+        {selected === 'active' ? <Icons.ChevronTop /> : <Icons.ChevronDown />}
+      </Flex>
       {children}
     </div>
   )

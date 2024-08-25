@@ -13,5 +13,5 @@ export const headerContainer = stack({
 	background: "#170D19",
 	color: "white",
 
-	borderBottom: "#35243D 1px solid",
+	borderBottom: "{colors.border} 1px solid",
 });

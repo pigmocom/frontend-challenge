@@ -3,7 +3,7 @@ import { css } from "@styled-system/css";
 export const defaultLayoutStyle = css({
   display: 'grid',
 
-  gridTemplateColumns: '2fr 12fr',
+  gridTemplateColumns: '2fr 14fr',
   gridTemplateRows: '100%',
 })
 

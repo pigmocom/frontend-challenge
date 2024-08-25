@@ -1,4 +1,8 @@
-import { cva, RecipeVariantProps } from "@styled-system/css";
+import { css, cva, RecipeVariantProps } from "@styled-system/css";
+
+export const sidebarStyle = css.raw({
+  borderRight: '1px solid {colors.border}',
+})
 
 export const sidebarItemStyle = cva({
   base: {
@@ -19,17 +23,25 @@ export const sidebarItemStyle = cva({
   variants: {
     border: {
       block: {
-        borderBlock: '1px solid #35243D'
+        borderBlock: '1px solid {colors.border}'
       },
       top: {
-        borderTop: '1px solid #35243D'
+        borderTop: '1px solid {colors.border}'
       }
     },
     hover: {
       highlight: {
         _hover: {
           background: '#4b3456',
-          color: 'white!important'
+          color: 'white!important',
+
+            '& > svg path': {
+              fill: 'primary'
+            },
+
+            '& > p': {
+              color: 'white'
+            }
         },
       }
     }
@@ -40,6 +52,9 @@ export const sideBarGroupStyle = cva({
   base: {
     height: 'fit-content',
     width: '100%',
+    '& > p': {
+      color: 'muted'
+    }
   },
   defaultVariants: {
     selected: 'default'
@@ -48,10 +63,30 @@ export const sideBarGroupStyle = cva({
     selected: {
       active: {
         background: 'hsla(285, 24%, 13%, 0.6)',
+        '& > p': {
+          color: 'primary'
+        }
       },
       default: {
         background: 'hsla(290, 32%, 7%, 1)'
       }
+    }
+  }
+})
+
+export const sideBarGroupHeaderStyle = cva({
+  base: {
+    paddingInline: 6,
+    paddingBlock: 3,
+
+    borderTop: '1px solid {colors.border}',
+  },
+  variants: {
+    selected: {
+      active: {
+        borderBlock: '1px solid {colors.border}',
+      },
+      default: {}
     }
   }
 })

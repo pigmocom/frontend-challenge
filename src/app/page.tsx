@@ -26,12 +26,12 @@ import { box, stack } from "../../styled-system/patterns";
 export default function Home() {
   return (
     <DefaultLayout>
-      <SideBar.Root gap={6}>
+      <SideBar.Root gap={4}>
         <Box paddingBlock={2} paddingInline={4} width="full">
           <ToggleMenu.Root>
-            <ToggleMenu.Item icon="Spades" title="spades" />
-            <ToggleMenu.Item icon="Spades" title="espadas" />
-            <ToggleMenu.Item icon="Spades" title="katanas" />
+            <ToggleMenu.Item icon="Spades" title="cassino" />
+            <ToggleMenu.Item icon="Trophy" title="awards" />
+            <ToggleMenu.Item icon="Spades" title="criptos" />
           </ToggleMenu.Root>
         </Box>
         <Flex direction="column">
@@ -52,8 +52,8 @@ export default function Home() {
               </Flex>
             </Flex>
           </Box>
-          <Box paddingBlock={2} paddingInline={4} width="full">
-            <Flex direction="column" align="start">
+          <Box paddingBlock={2} paddingInline={1} width="full">
+            <Flex direction="column" align="start" gap={2}>
               <SideBar.Item icon="Airdrop" iconPosition="left" hover="highlight">
                 <Text size="h5" color="muted">$PIG Airdrop</Text>
               </SideBar.Item>
@@ -63,26 +63,44 @@ export default function Home() {
             </Flex>
           </Box>
         </Flex>
-        <>
+        <Flex direction="column">
           <SideBar.Group title="CASSINO" selected="active">
             {MockSidebar.map(({ title, icon }) => (
               <li
                 className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}
                 key={`sidebar-${title}`}
               >
-                <SideBar.Item icon={icon} iconPosition="left" key={`sidebar-${title}`} hover="highlight">
+                <SideBar.Item icon={icon as keyof typeof Icons} iconPosition="left" key={`sidebar-${title}`} hover="highlight">
                   <Text color="muted">{title}</Text>
                 </SideBar.Item>
               </li>
             ))}
           </SideBar.Group>
-          <SideBar.Item border="top" icon="ChevronTop" iconPosition="right">
-            <Text size="h5" textTransform="uppercase" color="muted">TRADE</Text>
-          </SideBar.Item>
-          <SideBar.Item border="top" icon="ChevronTop" iconPosition="right">
-            <Text size="h5" textTransform="uppercase" color="muted">ESPORTES</Text>
-          </SideBar.Item>
-        </>
+          <SideBar.Group title="TRADE" selected="active">
+            {MockSidebar.map(({ title, icon }) => (
+              <li
+                className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}
+                key={`sidebar-${title}`}
+              >
+                <SideBar.Item icon={icon as keyof typeof Icons} iconPosition="left" key={`sidebar-${title}`} hover="highlight">
+                  <Text color="muted">{title}</Text>
+                </SideBar.Item>
+              </li>
+            ))}
+          </SideBar.Group>
+          <SideBar.Group title="ESPORTES" selected="active">
+            {MockSidebar.map(({ title, icon }) => (
+              <li
+                className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}
+                key={`sidebar-${title}`}
+              >
+                <SideBar.Item icon={icon as keyof typeof Icons} iconPosition="left" key={`sidebar-${title}`} hover="highlight">
+                  <Text color="muted">{title}</Text>
+                </SideBar.Item>
+              </li>
+            ))}
+          </SideBar.Group>
+        </Flex>
       </SideBar.Root>
       <div>
         <Header.Root>
@@ -253,7 +271,7 @@ export default function Home() {
           <Flex
             gap={11}
             direction="column"
-            css={css.raw({ paddingBlock: '3rem', paddingInline: '16%' })}
+            css={css.raw({ paddingBlock: '3rem' })}
           >
             <Flex direction="row">
               <Flex justify="center" align="center">
@@ -325,7 +343,7 @@ export default function Home() {
             <Flex gap={4}>
               <SolidCard.Root gap={5} direction="row" background="pink">
                 <Icons.DiscordLogo />
-                <Text>Join Discord's largest community of players now!</Text>
+                <Text>Join {"Discord's"} largest community of players now!</Text>
               </SolidCard.Root>
               <SolidCard.Root gap={5} direction="row">
                 <Icons.Telegram />

@@ -14,7 +14,7 @@ export const cardRootStyle = cva({
 		},
     border: {
 			outline: {
-				border: '1px solid #35243D'
+				border: '1px solid {colors.border}'
 			},
 			"": {}
 		},
@@ -27,7 +27,7 @@ export const cardRootStyle = cva({
       },
       highlight: {
         background: {
-            base: 'linear-gradient(145deg, #170D19 0%, #35243D 100%)',
+            base: 'linear-gradient(145deg, #170D19 0%, {colors.border} 100%)',
 
         },
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',

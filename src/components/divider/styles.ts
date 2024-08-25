@@ -7,7 +7,7 @@ export const dividerStyle = cva({
   variants: {
     color: {
       muted: {
-				color: "#35243D",
+				color: "{colors.border}",
       }
     }
   }
