@@ -8,11 +8,11 @@ type TagPropsType = style.TagVariants & PropsWithCSS
 
 export function Tag({
   children,
-  bg = 'primary',
-  border = 'outline',
+  bg,
+  border,
   outline,
-  padding = 'default',
-  radius = 'sm',
+  padding,
+  radius,
   align,
   direction,
   gap,

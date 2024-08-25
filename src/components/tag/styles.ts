@@ -4,6 +4,12 @@ export const tagContainer = cva({
   base: {
     display: 'flex',
   },
+  defaultVariants: {
+    bg: 'primary',
+    border: 'outline',
+    padding: 'default',
+    radius: 'xs'
+  },
   variants: {
     bg: {
       primary: {
@@ -41,6 +47,9 @@ export const tagContainer = cva({
       },
       sm: {
         borderRadius: 'sm'
+      },
+      xs: {
+        borderRadius: 'xs'
       }
     }
   }

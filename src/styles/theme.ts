@@ -75,12 +75,14 @@ export const theme: Config['theme'] = {
         96: { value: "24rem" }, // 384px
       },
       radii: {
+        4: { value: '0.25rem' },
         20: { value: '0.65rem' },
         8: { value: '0.5rem' }
       }
     },
     semanticTokens: {
       radii: {
+        xs: { value: '{radii.4}' },
         sm: { value: '{radii.8}' },
         md: { value: '{radii.20}' }
       }
