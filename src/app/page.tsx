@@ -39,13 +39,13 @@ export default function Home() {
           <Banner.Root>
             <Banner.Image src='/assets/banner.png' alt='banner' />
             <div className={stack({ gap: 8 })}>
-              <div>
-                <Text size="h1" weight={700}>Boas vindas  ao Pigmo!</Text>
+              <Flex direction="column" align="start">
+                <Text size="h1" weight={700}>Boas vindas ao Pigmo!</Text>
                 <Text size="h3" lineHeight="paragraph" color="muted">
                   Jogue inteligente conosco. Crie sua conta <br />
                   ou entre agora para ganhar recompensas.
                 </Text>
-              </div>
+              </Flex>
               <Flex gap={2}>
                 <Button>
                   <Text size="h5" weight={700}>QUERO ME CADASTRAR</Text>

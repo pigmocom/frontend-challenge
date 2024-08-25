@@ -133,62 +133,62 @@ export function HomeLayout({ children }: PropsWithChildren) {
                 <Icons.WhiteLogo />
                 <Flex gap={8} align="center">
                   <Icons.Android />
-                  <Text color="muted" letterSpace="logo">BEYOND</Text>
-                  <Text letterSpace="logo">LUCK</Text>
+                  <Text color="muted" weight={400} letterSpace="logo">BEYOND</Text>
+                  <Text weight={400} letterSpace="logo">LUCK</Text>
                   <Icons.Android />
                 </Flex>
               </Flex>
               <Flex align="start" justify="around">
                 <ul>
-                  <Flex gap={6} direction="column">
+                  <Flex gap={6} direction="column" align="start">
                     <li>
-                      <Text textTransform="uppercase" size="h4">Plataform</Text>
+                      <Text textTransform="uppercase" size="h4" weight={700}>Plataform</Text>
                     </li>
                     <Flex gap={4} align="start" direction="column">
                       <li>
-                        <Text color="muted">About</Text>
+                        <Text color="muted" weight={400}>About</Text>
                       </li>
                       <li>
-                        <Text color="muted">Support</Text>
+                        <Text color="muted" weight={400}>Support</Text>
                       </li>
                       <li>
-                        <Text color="muted">Provably Fair</Text>
+                        <Text color="muted" weight={400}>Provably Fair</Text>
                       </li>
                     </Flex>
                   </Flex>
                 </ul>
                 <ul>
-                  <Flex gap={6} direction="column">
+                  <Flex gap={6} direction="column" align="start">
                     <li>
-                      <Text textTransform="uppercase" size="h4">Plataform</Text>
+                      <Text textTransform="uppercase" weight={700} size="h4">Policy</Text>
                     </li>
                     <Flex gap={4} align="start" direction="column">
                       <li>
-                        <Text color="muted">Terms of Service</Text>
+                        <Text color="muted" weight={400}>Terms of Service</Text>
                       </li>
                       <li>
-                        <Text color="muted">Privacy Policy</Text>
+                        <Text color="muted" weight={400}>Privacy Policy</Text>
                       </li>
                       <li>
-                        <Text color="muted">License</Text>
+                        <Text color="muted" weight={400}>License</Text>
                       </li>
                     </Flex>
                   </Flex>
                 </ul>
                 <ul>
-                  <Flex gap={6} direction="column">
+                  <Flex gap={6} direction="column" align="start">
                     <li>
-                      <Text textTransform="uppercase" size="h4">Plataform</Text>
+                      <Text textTransform="uppercase" weight={700} size="h4">Community</Text>
                     </li>
                     <Flex gap={4} align="start" direction="column">
                       <li>
-                        <Text color="muted">About</Text>
+                        <Text color="muted" weight={400}>About</Text>
                       </li>
                       <li>
-                        <Text color="muted">Support</Text>
+                        <Text color="muted" weight={400}>Support</Text>
                       </li>
                       <li>
-                        <Text color="muted">Provably Fair</Text>
+                        <Text color="muted" weight={400}>Provably Fair</Text>
                       </li>
                     </Flex>
                   </Flex>
@@ -199,15 +199,15 @@ export function HomeLayout({ children }: PropsWithChildren) {
             <Flex gap={4}>
               <SolidCard.Root gap={5} direction="row" background="pink">
                 <Icons.DiscordLogo />
-                <Text>Join {"Discord's"} largest community of players now!</Text>
+                <Text weight={400}>Join <Text weight={700}>{"Discord's"} largest community</Text> of players now!</Text>
               </SolidCard.Root>
               <SolidCard.Root gap={5} direction="row">
                 <Icons.Telegram />
-                <Text>Pigmo is also on Telegram. Discover more now</Text>
+                <Text weight={400}>Pigmo is also on Telegram. <Text weight={700}>Discover more now</Text></Text>
               </SolidCard.Root>
               <SolidCard.Root gap={5} direction="row" background="dark">
                 <Icons.X />
-                <Text>Follow us on X and keep up everything about us</Text>
+                <Text weight={400}><Text weight={700}>Follow us on X</Text> and keep up everything about us</Text>
               </SolidCard.Root>
             </Flex>
           </Flex>
@@ -223,10 +223,13 @@ export function HomeLayout({ children }: PropsWithChildren) {
               bg: 'linear-gradient(270deg, hsla(287, 29%, 6%, 1), hsla(287, 28%, 10%, 1))'
             })}
           >
-            <Text>@2024 Pigmo - All rights reserved. Pigmo is licensed and authorized, operating under the Game Service Provider Master License. </Text>
+            <Flex gap={1}>
+              <Text weight={700}>@2024 Pigmo</Text>
+              <Text color="muted" weight={400}>- All rights reserved. Pigmo is licensed and authorized, operating under the Game Service Provider Master License.</Text>
+            </Flex>
             <Flex gap={4} width="auto">
               <Icons.Mail />
-              <Text textTransform="uppercase">
+              <Text textTransform="uppercase" weight={700} color="muted" wrap="nowrap">
                 Contact Us
               </Text>
             </Flex>

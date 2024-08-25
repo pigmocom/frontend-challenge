@@ -4,6 +4,8 @@ export const textStyle = cva({
 	base: {
 		color: "white",
 		fontFamily: "body",
+
+		display: "inline",
 	},
 	defaultVariants: {
 		size: 'textMedium',
@@ -55,6 +57,11 @@ export const textStyle = cva({
 		lineHeight: {
 			paragraph: {
 				lineHeight: '22.94px'
+			}
+		},
+		wrap: {
+			nowrap: {
+				whiteSpace: 'nowrap'
 			}
 		}
 	},
