@@ -106,11 +106,11 @@ export default function Home() {
               <Carousel.Content gap={4}>
                 {cryptoMock.map((i) => (
                   <Card.Root key={i}>
-                    <Card.Content gap={4} direction="column">
-                      <Flex gap={10}>
+                    <Card.Content gap={3} direction="column">
+                      <Flex justify="between">
                         <Flex gap={3}>
                           <Card.Icon>
-                            <Image src={`/assets/crypto/${i}.png`} fill alt="card-icon" />
+                            <Image src={`/assets/crypto/${i}.png`} fill objectFit="contain" alt="card-icon" />
                           </Card.Icon>
                           <Text size='h4' textTransform="uppercase">{i}</Text>
                         </Flex>
@@ -125,13 +125,15 @@ export default function Home() {
                         <Text size="card">$ 60,390.85</Text>
                         <Divider />
                       </Flex>
-                      <Flex justify="between">
-                        <Text color="muted" size="textMedium" textTransform="uppercase">24 VOL</Text>
-                        <Text size="textMedium" textTransform="uppercase">$757M</Text>
-                      </Flex>
-                      <Flex justify="between">
-                        <Text color="muted" size="textMedium" textTransform="uppercase">LEVERAGE</Text>
-                        <Text size="textMedium" textTransform="uppercase">1000x</Text>
+                      <Flex direction="column" gap={2.5}>
+                        <Flex justify="between">
+                          <Text color="muted" size="textMedium" textTransform="uppercase">24 VOL</Text>
+                          <Text size="textMedium" textTransform="uppercase">$757M</Text>
+                        </Flex>
+                        <Flex justify="between">
+                          <Text color="muted" size="textMedium" textTransform="uppercase">LEVERAGE</Text>
+                          <Text size="textMedium" textTransform="uppercase">1000x</Text>
+                        </Flex>
                       </Flex>
                     </Card.Content>
                   </Card.Root>

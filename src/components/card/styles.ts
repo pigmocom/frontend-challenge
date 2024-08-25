@@ -41,7 +41,9 @@ export const cardIconStyle = cva({
     position: 'relative',
     borderRadius: 'md',
     width: '7',
-    height: '7'
+    height: '7',
+    maxW: '7',
+    maxH: '7'
   },
   variants: {
 		radius: {
