@@ -1,8 +1,8 @@
 import { stack } from "../../../styled-system/patterns";
 
 export const headerContainer = stack({
-	paddingBlock: "4",
-	paddingInline: "8",
+	paddingBlock: 3,
+	// paddingInline: 6,
 
 	flexDirection: "row",
 
