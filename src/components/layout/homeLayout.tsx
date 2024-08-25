@@ -1,0 +1,217 @@
+import { css } from "@styled-system/css";
+import { box, divider } from "@styled-system/patterns";
+import { PropsWithChildren } from "react";
+import { Icons } from "../@shared/icons";
+import { Avatar } from "../avatar";
+import { Footer } from "../footer";
+import { SideBar } from "../sidebar";
+import { MockSidebar } from "../sidebar/mock.sidebar";
+import { SolidCard } from "../solid-card";
+import { Tag } from "../tag";
+import { Text } from "../text";
+import { ToggleMenu } from "../toggle-menu";
+import { Box } from "../ui/box";
+import { Flex } from "../ui/flex";
+import { defaultLayoutStyle } from "./styles";
+
+export function HomeLayout({ children }: PropsWithChildren) {
+  return (
+    <div className={defaultLayoutStyle}>
+      <SideBar.Root gap={4}>
+        <Box paddingBlock={2} paddingInline={4} width="full">
+          <ToggleMenu.Root>
+            <ToggleMenu.Item icon="Spades" title="cassino" />
+            <ToggleMenu.Item icon="Trophy" title="awards" />
+            <ToggleMenu.Item icon="Spades" title="criptos" />
+          </ToggleMenu.Root>
+        </Box>
+        <Flex direction="column">
+          <Box paddingBlock={2} paddingInline={4} width="full">
+            <Flex justify="between" align="end">
+              <Flex gap={2.5}>
+                <Avatar title="Pigmo" />
+                <Flex direction="column" align="start" gap={1}>
+                  <Text size="h5">Pigmo Coin</Text>
+                  <Text color="muted" size="h5">$0.0000</Text>
+                </Flex>
+              </Flex>
+              <Flex justify="end" width="auto">
+                <Tag outline="green" bg="outline" gap={1}>
+                  <Icons.ArrowDiagonalUp />
+                  <Text color="green">2.13%</Text>
+                </Tag>
+              </Flex>
+            </Flex>
+          </Box>
+          <Box paddingBlock={2} paddingInline={1} width="full">
+            <Flex direction="column" align="start" gap={2}>
+              <SideBar.Item icon="Airdrop" iconPosition="left" hover="highlight">
+                <Text size="h5" color="muted">$PIG Airdrop</Text>
+              </SideBar.Item>
+              <SideBar.Item icon="Start" iconPosition="left" hover="highlight">
+                <Text size="h5" color="muted">NFT Staking</Text>
+              </SideBar.Item>
+            </Flex>
+          </Box>
+        </Flex>
+        <Flex direction="column">
+          <SideBar.Group title="CASSINO" selected="active">
+            {MockSidebar.map(({ title, icon }) => (
+              <li
+                className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}
+                key={`sidebar-${title}`}
+              >
+                <SideBar.Item icon={icon as keyof typeof Icons} iconPosition="left" key={`sidebar-${title}`} hover="highlight">
+                  <Text color="muted">{title}</Text>
+                </SideBar.Item>
+              </li>
+            ))}
+          </SideBar.Group>
+          <SideBar.Group title="TRADE" selected="active">
+            {MockSidebar.map(({ title, icon }) => (
+              <li
+                className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}
+                key={`sidebar-${title}`}
+              >
+                <SideBar.Item icon={icon as keyof typeof Icons} iconPosition="left" key={`sidebar-${title}`} hover="highlight">
+                  <Text color="muted">{title}</Text>
+                </SideBar.Item>
+              </li>
+            ))}
+          </SideBar.Group>
+          <SideBar.Group title="ESPORTES" selected="active">
+            {MockSidebar.map(({ title, icon }) => (
+              <li
+                className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}
+                key={`sidebar-${title}`}
+              >
+                <SideBar.Item icon={icon as keyof typeof Icons} iconPosition="left" key={`sidebar-${title}`} hover="highlight">
+                  <Text color="muted">{title}</Text>
+                </SideBar.Item>
+              </li>
+            ))}
+          </SideBar.Group>
+        </Flex>
+      </SideBar.Root>
+
+      <div>
+        {children}
+        <div className={divider({ orientation: 'horizontal', color: 'border' })} />
+        <Footer.Root
+          align="center"
+          direction="column"
+          css={css.raw({ bg: 'hsla(285, 30%, 6%, 1)' })}
+        >
+          <Flex
+            gap={11}
+            direction="column"
+            css={css.raw({ paddingInline: '56', paddingBlock: '8' })}
+          >
+            <Flex>
+              <Flex gap={6}>
+                <Icons.WhiteLogo />
+                <Flex gap={8} align="center">
+                  <Icons.Android />
+                  <Text color="muted" letterSpace="logo">BEYOND</Text>
+                  <Text letterSpace="logo">LUCK</Text>
+                  <Icons.Android />
+                </Flex>
+              </Flex>
+              <Flex align="start" justify="around">
+                <ul>
+                  <Flex gap={6} direction="column">
+                    <li>
+                      <Text textTransform="uppercase" size="h4">Plataform</Text>
+                    </li>
+                    <Flex gap={4} align="start" direction="column">
+                      <li>
+                        <Text color="muted">About</Text>
+                      </li>
+                      <li>
+                        <Text color="muted">Support</Text>
+                      </li>
+                      <li>
+                        <Text color="muted">Provably Fair</Text>
+                      </li>
+                    </Flex>
+                  </Flex>
+                </ul>
+                <ul>
+                  <Flex gap={6} direction="column">
+                    <li>
+                      <Text textTransform="uppercase" size="h4">Plataform</Text>
+                    </li>
+                    <Flex gap={4} align="start" direction="column">
+                      <li>
+                        <Text color="muted">Terms of Service</Text>
+                      </li>
+                      <li>
+                        <Text color="muted">Privacy Policy</Text>
+                      </li>
+                      <li>
+                        <Text color="muted">License</Text>
+                      </li>
+                    </Flex>
+                  </Flex>
+                </ul>
+                <ul>
+                  <Flex gap={6} direction="column">
+                    <li>
+                      <Text textTransform="uppercase" size="h4">Plataform</Text>
+                    </li>
+                    <Flex gap={4} align="start" direction="column">
+                      <li>
+                        <Text color="muted">About</Text>
+                      </li>
+                      <li>
+                        <Text color="muted">Support</Text>
+                      </li>
+                      <li>
+                        <Text color="muted">Provably Fair</Text>
+                      </li>
+                    </Flex>
+                  </Flex>
+                </ul>
+              </Flex>
+            </Flex>
+
+            <Flex gap={4}>
+              <SolidCard.Root gap={5} direction="row" background="pink">
+                <Icons.DiscordLogo />
+                <Text>Join {"Discord's"} largest community of players now!</Text>
+              </SolidCard.Root>
+              <SolidCard.Root gap={5} direction="row">
+                <Icons.Telegram />
+                <Text>Pigmo is also on Telegram. Discover more now</Text>
+              </SolidCard.Root>
+              <SolidCard.Root gap={5} direction="row" background="dark">
+                <Icons.X />
+                <Text>Follow us on X and keep up everything about us</Text>
+              </SolidCard.Root>
+            </Flex>
+          </Flex>
+
+          <div className={divider({ orientation: 'horizontal', color: 'border' })} />
+
+          <Flex
+            justify="between"
+            css={css.raw({
+              paddingLeft: '10',
+              paddingBlock: "5",
+              paddingRight: '16%',
+              bg: 'linear-gradient(270deg, hsla(287, 29%, 6%, 1), hsla(287, 28%, 10%, 1))'
+            })}
+          >
+            <Text>@2024 Pigmo - All rights reserved. Pigmo is licensed and authorized, operating under the Game Service Provider Master License. </Text>
+            <Flex gap={4} width="auto">
+              <Icons.Mail />
+              <Text textTransform="uppercase">
+                Contact Us
+              </Text>
+            </Flex>
+          </Flex>
+        </Footer.Root>
+      </div>
+    </div>
+  )
+}
