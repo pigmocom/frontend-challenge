@@ -84,6 +84,25 @@ export const theme: Config['theme'] = {
         sm: { value: '{radii.8}' },
         md: { value: '{radii.20}' }
       }
+    },
+
+    keyframes: {
+      'collapse': {
+        '0%': {
+          maxHeight: 'max-content'
+        },
+        '100%': {
+          maxHeight: 0
+        }
+      },
+      'collapse-out': {
+        '0%': {
+          maxHeight: 0
+        },
+        '100%': {
+          maxHeight: 'max-content'
+        }
+      }
     }
   }
 }

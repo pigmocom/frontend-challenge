@@ -1,20 +1,23 @@
-import { PropsWithChildren } from "react";
+import { cx } from "@styled-system/css";
+import { flex } from "@styled-system/patterns";
+import { ComponentPropsWithoutRef, PropsWithChildren } from "react";
 import { Icons } from "../@shared/icons";
 import { Text } from "../text";
-import { Flex } from "../ui/flex";
 import { sideBarGroupHeaderStyle, sideBarGroupStyle, SidebarGroupVariants } from "./styles";
 
 type SidebarGroupProps = {
   title: string
-} & SidebarGroupVariants
+} & SidebarGroupVariants & ComponentPropsWithoutRef<'div'>
 
-export function SideBarGroup({ children, title, selected }: PropsWithChildren<SidebarGroupProps>) {
+export function SideBarGroup({ children, title, selected, onClick, ...rest }: PropsWithChildren<SidebarGroupProps>) {
   return (
-    <div className={sideBarGroupStyle({ selected })}>
-      <Flex
-        justify="between"
-        gap={3}
-        css={sideBarGroupHeaderStyle.raw({ selected })}
+    <div className={sideBarGroupStyle({ selected })} {...rest}>
+      <div
+        className={cx(
+          flex({ justify: 'space-between', gap: 3 }),
+          sideBarGroupHeaderStyle({ selected })
+        )}
+        onClick={onClick}
       >
         <Text
           size="h5"
@@ -25,8 +28,10 @@ export function SideBarGroup({ children, title, selected }: PropsWithChildren<Si
           {title}
         </Text>
         {selected === 'active' ? <Icons.ChevronTop /> : <Icons.ChevronDown />}
-      </Flex>
-      {children}
+      </div>
+      <ul>
+        {children}
+      </ul>
     </div>
   )
 }

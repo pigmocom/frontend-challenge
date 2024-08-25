@@ -1,6 +1,8 @@
+'use client'
+
 import { css } from "@styled-system/css";
 import { box, divider } from "@styled-system/patterns";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useState } from "react";
 import { Icons } from "../@shared/icons";
 import { Avatar } from "../avatar";
 import { Footer } from "../footer";
@@ -15,6 +17,13 @@ import { Flex } from "../ui/flex";
 import { defaultLayoutStyle } from "./styles";
 
 export function HomeLayout({ children }: PropsWithChildren) {
+  const [selectedMenu, setSelectedMenu] = useState<'cassino' | 'trade' | 'esportes' | null>(null)
+
+  const handleSelectMenu = (menu: 'cassino' | 'trade' | 'esportes') => () => {
+    if (selectedMenu === menu) setSelectedMenu(null)
+    else setSelectedMenu(menu)
+  }
+
   return (
     <div className={defaultLayoutStyle}>
       <SideBar.Root gap={4}>
@@ -55,7 +64,11 @@ export function HomeLayout({ children }: PropsWithChildren) {
           </Box>
         </Flex>
         <Flex direction="column">
-          <SideBar.Group title="CASSINO" selected="active">
+          <SideBar.Group
+            onClick={handleSelectMenu('cassino')}
+            title="CASSINO"
+            selected={selectedMenu === 'cassino' ? 'active' : 'default'}
+          >
             {MockSidebar.map(({ title, icon }) => (
               <li
                 className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}
@@ -67,7 +80,11 @@ export function HomeLayout({ children }: PropsWithChildren) {
               </li>
             ))}
           </SideBar.Group>
-          <SideBar.Group title="TRADE" selected="active">
+          <SideBar.Group
+            onClick={handleSelectMenu('trade')}
+            title="TRADE"
+            selected={selectedMenu === 'trade' ? 'active' : 'default'}
+          >
             {MockSidebar.map(({ title, icon }) => (
               <li
                 className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}
@@ -79,7 +96,11 @@ export function HomeLayout({ children }: PropsWithChildren) {
               </li>
             ))}
           </SideBar.Group>
-          <SideBar.Group title="ESPORTES" selected="active">
+          <SideBar.Group
+            onClick={handleSelectMenu('esportes')}
+            title="ESPORTES"
+            selected={selectedMenu === 'esportes' ? 'active' : 'default'}
+          >
             {MockSidebar.map(({ title, icon }) => (
               <li
                 className={box({ display: 'block', margin: '0 15px', padding: '5px 0' })}

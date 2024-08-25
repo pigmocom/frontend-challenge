@@ -50,7 +50,7 @@ export const sidebarItemStyle = cva({
 
 export const sideBarGroupStyle = cva({
   base: {
-    height: 'fit-content',
+    transition: 'max-height .25s ease-in-out',
     width: '100%',
     '& > p': {
       color: 'muted'
@@ -64,11 +64,23 @@ export const sideBarGroupStyle = cva({
       active: {
         background: 'hsla(285, 24%, 13%, 0.6)',
         '& > p': {
-          color: 'primary'
+          color: 'primary',
+
+        },
+        '& > ul': {
+          maxHeight: 'max-content',
         }
       },
       default: {
-        background: 'hsla(290, 32%, 7%, 1)'
+        background: 'hsla(290, 32%, 7%, 1)',
+
+        '& > ul': {
+          maxHeight: 0,
+        
+          '& > li': {
+            display: 'none'
+          }
+        }
       }
     }
   }
