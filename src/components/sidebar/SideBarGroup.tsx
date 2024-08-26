@@ -22,7 +22,7 @@ export function SideBarGroup({ children, title, selected, onClick, ...rest }: Pr
         <Text
           size="h5"
           textTransform="uppercase"
-          weight="semiBold"
+          weight={700}
           color={selected === 'active' ? "primary" : "muted"}
         >
           {title}

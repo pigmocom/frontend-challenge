@@ -27,7 +27,7 @@ export function HomeLayout({ children }: PropsWithChildren) {
   return (
     <div className={defaultLayoutStyle}>
       <SideBar.Root gap={4}>
-        <Box paddingBlock={2} paddingInline={4} width="full">
+        <Box paddingBlock={2} paddingInline={6} width="full">
           <ToggleMenu.Root>
             <ToggleMenu.Item icon="Spades" title="cassino" />
             <ToggleMenu.Item icon="Trophy" title="awards" />
@@ -35,13 +35,13 @@ export function HomeLayout({ children }: PropsWithChildren) {
           </ToggleMenu.Root>
         </Box>
         <Flex direction="column">
-          <Box paddingBlock={2} paddingInline={4} width="full">
+          <Box paddingBlock={2} paddingInline={6} width="full">
             <Flex justify="between" align="end">
-              <Flex gap={2.5}>
+              <Flex gap={2.5} align="start">
                 <Avatar title="Pigmo" />
-                <Flex direction="column" align="start" gap={1}>
-                  <Text size="h5">Pigmo Coin</Text>
-                  <Text color="muted" size="h5">$0.0000</Text>
+                <Flex direction="column" align="start" >
+                  <Text size="h5" weight={700}>Pigmo Coin</Text>
+                  <Text color="muted" size="h5" weight={400}>$0.0000</Text>
                 </Flex>
               </Flex>
               <Flex justify="end" width="auto">
@@ -52,7 +52,7 @@ export function HomeLayout({ children }: PropsWithChildren) {
               </Flex>
             </Flex>
           </Box>
-          <Box paddingBlock={2} paddingInline={1} width="full">
+          <Box paddingBlock={3} paddingInline={5} width="full">
             <Flex direction="column" align="start" gap={2}>
               <SideBar.Item icon="Airdrop" iconPosition="left" hover="highlight">
                 <Text size="h5" color="muted">$PIG Airdrop</Text>

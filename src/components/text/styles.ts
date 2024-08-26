@@ -57,6 +57,9 @@ export const textStyle = cva({
 		lineHeight: {
 			paragraph: {
 				lineHeight: '22.94px'
+			},
+			sidebar: {
+				lineHeight: '16.06px'
 			}
 		},
 		wrap: {

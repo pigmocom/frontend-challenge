@@ -15,9 +15,7 @@ export function SideBarItem({ children, icon, iconPosition, css: style, border, 
   return (
     <Flex
       justify={iconPosition === 'left' ? "start" : "between"}
-      gap={3}
       css={css.raw(style, sidebarItemStyle.raw({ border, hover }))}
-      // width="auto"
       {...rest}
     >
       {iconPosition === 'left' && <Icon />}

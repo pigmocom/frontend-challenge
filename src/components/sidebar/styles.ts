@@ -9,11 +9,11 @@ export const sidebarItemStyle = cva({
     display: 'flex',
     alignItems: 'center',
   
-    gap: 3,
+    gap:2,
 
     rounded: 'sm',
 
-    paddingInline: 2,
+    paddingInline: 1,
     paddingBlock: 1,
 
     transition: 'all .3s',
@@ -88,7 +88,8 @@ export const sideBarGroupStyle = cva({
 
 export const sideBarGroupHeaderStyle = cva({
   base: {
-    paddingInline: 6,
+    pl: 6,
+    pr: 4,
     paddingBlock: 3,
 
     borderTop: '1px solid {colors.border}',
