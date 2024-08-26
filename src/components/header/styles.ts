@@ -1,7 +1,7 @@
 import { stack } from "../../../styled-system/patterns";
 
 export const headerContainer = stack({
-	py: 2.5,
+	py: 3,
 	px: 6,
 
 	flexDirection: "row",
