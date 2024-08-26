@@ -48,7 +48,7 @@ export default function Home() {
               </Flex>
               <Flex gap={2}>
                 <Button>
-                  <Text size="h5" weight={700}>QUERO ME CADASTRAR</Text>
+                  <Text size="h5" weight={700} lineHeight="xs">QUERO ME REGISTRAR</Text>
                 </Button>
                 <Button bg='outline' border="outline" aspect="square">
                   <Icons.Google />
@@ -109,7 +109,7 @@ export default function Home() {
 
                         <Tag outline="green" bg="outline" gap={1}>
                           <Icons.ArrowDiagonalUp />
-                          <Text color="green">2.13%</Text>
+                          <Text color="green" lineHeight="xs">2.13%</Text>
                         </Tag>
                       </Flex>
                       <Flex gap={2} direction="column" align="start">

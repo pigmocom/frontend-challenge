@@ -19,26 +19,26 @@ export const tagContainer = cva({
     },
     border: {
 			primary: {
-				border: '1px solid #FF6864'
+				border: '{spacing.px} solid #FF6864'
 			},
 			outline: {
-				border: '1px solid {colors.border}'
+				border: '{spacing.px} solid {colors.border}'
 			},
 			"": {}
 		},
     outline: {
       green: {
 				border: '{spacing.px} solid {colors.green}',
-        boxShadow: '0 0 4px {colors.green}'
+        boxShadow: '0 0 {spacing.1} {colors.green}'
       }
     },
     padding: {
       default: {
-        paddingInline: '1'
+        paddingInline: 1,
       },
       pill: {
-        paddingBlock: '1',
-        paddingInline: '2',
+        paddingBlock: 1,
+        paddingInline: 2,
       }
     },
     radius: {

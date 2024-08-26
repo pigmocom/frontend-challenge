@@ -6,15 +6,16 @@ export const buttonContainer = cva({
 		justifyContent: "center",
 		alignItems: "center",
 
-		paddingBlock: "3",
-		paddingInline: "4",
+		paddingBlock: "0.844rem",
+		paddingInline: 8,
 
-    cursor: { base: 'pointer', _disabled: 'default' }
+    cursor: { base: 'pointer', _disabled: 'default' },
 	},
 	variants: {
 		bg: {
 			primary: {
-				background: "radial-gradient(50% 100% at 50% 0,#E90083 0,#FF6864 100%)",
+				background: "radial-gradient(50% 100% at 50% 0,hsla(2, 100%, 70%, 1) 0,hsla(326, 100%, 46%, 1) 100%)",
+				boxShadow: "0px -3px 0px 0px hsla(290, 32%, 7%, 0.5) inset",
 			},
 			outline: {}
 		},
@@ -25,7 +26,7 @@ export const buttonContainer = cva({
 		},
 		border: {
 			primary: {
-				border: '1px solid #FF6864'
+				// border: '1px solid #FF6864'
 			},
 			outline: {
 				border: '1px solid #35243D'
@@ -34,8 +35,8 @@ export const buttonContainer = cva({
 		},
 		aspect: {
 			square: {
-				paddingBlock: "3",
-				paddingInline: "3",
+				paddingBlock: 2,
+				paddingInline: 2,
 			}
 		}
 	}

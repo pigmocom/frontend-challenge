@@ -39,16 +39,16 @@ export function HomeLayout({ children }: PropsWithChildren) {
             <Flex justify="between" align="end">
               <Flex gap={2.5} align="start">
                 <Avatar title="Pigmo" />
-                <Flex direction="column" align="start" >
+                <Flex direction="column" align="start">
                   <Text size="h5" weight={700}>Pigmo Coin</Text>
-                  <Text color="muted" size="h5" weight={400}>$0.0000</Text>
+                  <Flex direction="row" align="center" justify="between">
+                    <Text color="muted" size="h5" weight={400}>$0.0000</Text>
+                    <Tag outline="green" bg="outline" gap={1}>
+                      <Icons.ArrowDiagonalUp />
+                      <Text color="green" lineHeight="xs">2.13%</Text>
+                    </Tag>
+                  </Flex>
                 </Flex>
-              </Flex>
-              <Flex justify="end" width="auto">
-                <Tag outline="green" bg="outline" gap={1}>
-                  <Icons.ArrowDiagonalUp />
-                  <Text color="green">2.13%</Text>
-                </Tag>
               </Flex>
             </Flex>
           </Box>

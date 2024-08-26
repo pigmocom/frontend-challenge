@@ -56,10 +56,13 @@ export const textStyle = cva({
 		},
 		lineHeight: {
 			paragraph: {
-				lineHeight: '22.94px'
+				lineHeight: 1.25
 			},
 			sidebar: {
 				lineHeight: '16.06px'
+			},
+			xs: {
+				lineHeight: 1,
 			}
 		},
 		wrap: {
