@@ -1,0 +1,76 @@
+import { cva, RecipeVariantProps } from "@styled-system/css";
+
+export const gridContainer = cva({
+  base: {
+    display: 'grid'
+  },
+  variants: {
+    gap: {
+      0: { gap: "0px" },
+      px: { gap: "1" },
+      0.5:	{ gap: "0.125rem" },
+      1: { gap: "0.25rem" },
+      1.5: { gap: "0.375rem" },
+      2: { gap: "0.5rem" },
+      2.5: { gap: "0.625rem" },
+      3.0: { gap: ".75rem" },
+      3.5: { gap: "0.875rem" },
+      4: { gap: "1rem" },
+      5: { gap: "1.25rem" },
+      6: { gap: "1.5rem" },
+      7: { gap: "1.75rem" },
+      8: { gap: "2rem" },
+      9: { gap: "2.25rem" },
+      10: { gap: "2.5rem" },
+      11: { gap: "2.75rem" },
+      12: { gap: "3rem" },
+      14: { gap: "3.5rem" },
+      16: { gap: "4rem" },
+      20: { gap: "5rem" },
+      24: { gap: "6rem" },
+      28: { gap: "7rem" },
+      32: { gap: "8rem" },
+      36: { gap: "9rem" },
+      40: { gap: "10rem" },
+      44: { gap: "11rem" },
+      48: { gap: "12rem" },
+      52: { gap: "13rem" },
+      56: { gap: "14rem" },
+      60: { gap: "15rem" },
+      64: { gap: "16rem" },
+      72: { gap: "18rem" },
+      80: { gap: "20rem" },
+      96: { gap: "24rem" },
+    },
+    columns: {
+      1: { gridTemplateColumns: "repeat(1, minmax(0, 1fr))" },
+      2: { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
+      3: { gridTemplateColumns: "repeat(3, minmax(0, 1fr))" },
+      4: { gridTemplateColumns: "repeat(4, minmax(0, 1fr))" },
+      5: { gridTemplateColumns: "repeat(5, minmax(0, 1fr))" },
+      6: { gridTemplateColumns: "repeat(6, minmax(0, 1fr))" },
+      7: { gridTemplateColumns: "repeat(7, minmax(0, 1fr))" },
+      8: { gridTemplateColumns: "repeat(8, minmax(0, 1fr))" },
+      9: { gridTemplateColumns: "repeat(9, minmax(0, 1fr))" },
+      10: { gridTemplateColumns: "repeat(10, minmax(0, 1fr))" },
+      11: { gridTemplateColumns: "repeat(11, minmax(0, 1fr))" },
+      12: { gridTemplateColumns: "repeat(12, minmax(0, 1fr))" },
+    },
+    rows: {
+      1: { gridTemplateRows: "repeat(1, minmax(0, 1fr))" },
+      2: { gridTemplateRows: "repeat(2, minmax(0, 1fr))" },
+      3: { gridTemplateRows: "repeat(3, minmax(0, 1fr))" },
+      4: { gridTemplateRows: "repeat(4, minmax(0, 1fr))" },
+      5: { gridTemplateRows: "repeat(5, minmax(0, 1fr))" },
+      6: { gridTemplateRows: "repeat(6, minmax(0, 1fr))" },
+      7: { gridTemplateRows: "repeat(7, minmax(0, 1fr))" },
+      8: { gridTemplateRows: "repeat(8, minmax(0, 1fr))" },
+      9: { gridTemplateRows: "repeat(9, minmax(0, 1fr))" },
+      10: { gridTemplateRows: "repeat(10, minmax(0, 1fr))" },
+      11: { gridTemplateRows: "repeat(11, minmax(0, 1fr))" },
+      12: { gridTemplateRows: "repeat(12, minmax(0, 1fr))" },
+    }
+  }
+})
+
+export type GridVariants = RecipeVariantProps<typeof gridContainer>

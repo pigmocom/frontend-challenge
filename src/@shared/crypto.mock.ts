@@ -1,0 +1,1 @@
+export const cryptoMock = ['bonk', 'shiba', 'doge', 'sol', 'eth', 'btc'].reverse()
