@@ -13,7 +13,7 @@ export function ToggleMenuItem({ icon, title }: ToggleMenuItemProps) {
   return (
     <div className={toggleMenuItemStyle}>
       <Icon />
-      <Text textTransform="uppercase" weight="semiBold">{title}</Text>
+      <Text textTransform="uppercase" weight={600}>{title}</Text>
     </div>
   )
 }
